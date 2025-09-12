@@ -156,3 +156,18 @@ body {
 .form-note { color: rgba(255,255,255,0.75); }
 .footer { background: #0b0b0b; color: #bbbbbb; }
 .footer a { color: #efefef; }
+
+
+/* === AU brand overrides (can be tuned) === */
+:root{
+  --au-accent: #111111;   /* primary: near-black */
+  --au-soft:   #F6F3EE;   /* soft background: warm sand */
+  --au-line:   #E7E1D8;   /* warm divider */
+  --au-muted:  #6F6A63;   /* warm gray for text */
+  --au-card:   #FFFFFF;
+  --au-fg:     #141311;
+}
+.badge { display:inline-flex; gap:8px; padding:8px 12px; border:1px solid var(--au-line); border-radius:999px;}
+.badge-dot { width:8px; height:8px; border-radius:50%; background:var(--au-accent); margin-top:6px; }
+.bg-soft { background: var(--au-soft); }
+.border { border:1px solid var(--au-line); border-radius: 12px; }
