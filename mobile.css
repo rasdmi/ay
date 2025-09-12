@@ -1,12 +1,9 @@
-/* mobile.css — отдельные стили для мобильных/планшетов */
-@media (max-width: 820px) {
-  .header-inner { padding: 8px 0; gap: 10px; }
-  .nav { display: none; } /* компактный хэдер, навигация скрыта — основные якоря в блоках */
-  .hero-inner { grid-template-columns: 1fr; gap: 16px; }
-  .h1 { font-size: 32px; }
-  .art-frame { aspect-ratio: 16/10; }
-  .blocks-nav { grid-template-columns: 1fr; }
-  .block { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 12px; }
+@media (max-width: 960px) {
+  .hdr__in { grid-template-columns: auto auto; }
+  .nav { display: none; }
+  .hero__title { font-size: 22px; margin-top: 60px; }
+  .tiles { grid-template-columns: 1fr; }
+  .audience { grid-template-columns: 1fr 1fr; }
+  .team__card--founder { grid-template-columns: 1fr; justify-items: center; }
+  .paper--tilt { transform: none; height: auto; padding: 40px 20px; }
 }
