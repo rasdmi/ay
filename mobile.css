@@ -1,9 +1,1 @@
-@media (max-width: 960px) {
-  .hdr__in { grid-template-columns: auto auto; }
-  .nav { display: none; }
-  .hero__title { font-size: 22px; margin-top: 60px; }
-  .tiles { grid-template-columns: 1fr; }
-  .audience { grid-template-columns: 1fr 1fr; }
-  .team__card--founder { grid-template-columns: 1fr; justify-items: center; }
-  .paper--tilt { transform: none; height: auto; padding: 40px 20px; }
-}
+@media (max-width:960px){.header__in{grid-template-columns:auto auto}.nav{display:none}.hero__title{font-size:22px;margin-top:60px}.tiles{grid-template-columns:1fr}.audience{grid-template-columns:1fr 1fr}.paper--tilt{transform:none;height:auto;padding:40px 20px}}

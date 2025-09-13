@@ -1,18 +1,1 @@
-(function(){
-  Array.prototype.forEach.call(document.querySelectorAll('[data-scroll]'), function(el){
-    el.addEventListener('click', function(){
-      var to = el.getAttribute('data-scroll');
-      if (to && document.querySelector(to)) {
-        document.querySelector(to).scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-  var overlay = document.createElement('div');
-  overlay.className = 'debug-overlay';
-  document.body.appendChild(overlay);
-  window.addEventListener('keydown', function(e){
-    if (e.key.toLowerCase() === 'd') {
-      overlay.classList.toggle('on');
-    }
-  });
-})();
+(function(){Array.prototype.forEach.call(document.querySelectorAll('[data-scroll]'),function(el){el.addEventListener('click',function(){var to=el.getAttribute('data-scroll');if(to&&document.querySelector(to)){document.querySelector(to).scrollIntoView({behavior:'smooth',block:'start'});}});});var nav=document.getElementById('nav');(window.CONTENT.nav||[]).forEach(function(i){var d=document.createElement('div');d.textContent=i.title;d.setAttribute('data-scroll',i.href);d.addEventListener('click',function(){document.querySelector(i.href).scrollIntoView({behavior:'smooth'})});nav.appendChild(d);});var sWrap=document.getElementById('servicesTiles');(window.CONTENT.services||[]).forEach(function(s){var c=document.createElement('div');c.className='card';c.style.minHeight='180px';c.style.border='1px solid var(--line)';c.style.borderRadius='var(--radius)';c.style.padding='18px';c.style.boxShadow='var(--shadow)';var t=document.createElement('div');t.style.fontWeight='900';t.style.fontSize='18px';t.textContent=s;c.appendChild(t);sWrap.appendChild(c);});var a=document.getElementById('audienceGrid');(window.CONTENT.audience||[]).forEach(function(txt){var card=document.createElement('div');card.className='paper';card.style.minHeight='150px';card.style.borderRadius='16px';card.style.padding='12px';card.style.display='grid';card.style.alignContent='end';var title=document.createElement('div');title.style.fontWeight='800';title.style.fontSize='14px';title.textContent=txt;card.appendChild(title);a.appendChild(card);});var logos=document.getElementById('logos');(window.CONTENT.logos||new Array(3).fill({})).forEach(function(){var ph=document.createElement('div');ph.style.height='72px';ph.style.border='1px dashed #ccc';ph.style.borderRadius='12px';ph.style.background='#fafafa';logos.appendChild(ph);});var tg=document.getElementById('teamGrid');(window.CONTENT.team||[]).forEach(function(p){var row=document.createElement('div');row.style.display='grid';row.style.gridTemplateColumns='280px 1fr';row.style.gap='20px';var ph=document.createElement('div');ph.style.width='280px';ph.style.height='340px';ph.style.background='#ddd';ph.style.borderRadius='12px';ph.style.border='1px solid #444';var meta=document.createElement('div');var name=document.createElement('div');name.style.fontWeight='900';name.style.fontSize='22px';name.style.color='#fff';name.textContent=p.name;var role=document.createElement('div');role.className='muted';role.textContent=p.role;meta.appendChild(name);meta.appendChild(role);row.appendChild(ph);row.appendChild(meta);tg.appendChild(row);});})();
